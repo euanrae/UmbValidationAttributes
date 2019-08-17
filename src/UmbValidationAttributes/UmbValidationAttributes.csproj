@@ -232,6 +232,7 @@
   <ItemGroup>
     <Compile Include="Attributes\BaseAttributes\BaseEmailAddressAttribute.cs" />
     <Compile Include="Attributes\UmbracoEmailAddressAttribute.cs" />
+    <Compile Include="Attributes\UmbracoRegexAttribute.cs" />
     <Compile Include="Attributes\UmbracoRequiredAttribute.cs" />
     <Compile Include="Helpers\AttributeInitialisationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

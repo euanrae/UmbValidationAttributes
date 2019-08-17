@@ -28,10 +28,28 @@ namespace UmbValidationAttributes.Test.Helpers
                 new List<Type>
                 {
                     typeof(UmbracoRequiredAttribute),
-                    typeof(UmbracoEmailAddressAttribute)
+                    typeof(UmbracoEmailAddressAttribute),
+                    typeof(UmbracoRegexAttribute)
                 };
 
             return items.ToArray();
+        }
+
+        public static ValidationAttribute IntialiseAttribute(Type type)
+        {
+            object[] ctorParams;
+                
+            if (type == typeof(UmbracoRegexAttribute))
+            {
+                ctorParams = new[] { "test", "asdfasdfasdf" };
+            }
+            else
+            {
+                ctorParams = new[] { "test" };
+            }
+
+            return Activator.CreateInstance(type, ctorParams) as ValidationAttribute;
+
         }
     }
 }

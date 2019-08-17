@@ -76,10 +76,8 @@ namespace UmbValidationAttributes.Test
             mockService.Setup(ms => ms.GetValue(It.IsAny<string>(), It.IsAny<string>())).Returns(string.Empty);
             DependencyResolverHelper.SetValidationMessageServiceIntoResolver(mockService);
 
-            var fakeParams = new []{ "Test" };
-
-            var testInstance = Activator.CreateInstance(type, fakeParams) as ValidationAttribute;
-            var controlInstance = Activator.CreateInstance(type, fakeParams) as ValidationAttribute;
+            var testInstance = AttributeGeneratorHelper.IntialiseAttribute(type);
+            var controlInstance = AttributeGeneratorHelper.IntialiseAttribute(type);
 
             // act
             testInstance.Initialise("asdf", "asefasdf", string.Empty); // can be any validation attribute
