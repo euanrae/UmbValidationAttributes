@@ -4,9 +4,8 @@ using UmbValidationAttributes.Test.Helpers;
 using UmbValidationAttributes.Attributes;
 using UmbValidationAttributes.Services;
 using System.ComponentModel.DataAnnotations;
-using System;
 
-namespace UmbValidationAttributes.Test
+namespace UmbValidationAttributes.Test.AttributeTests
 {
     [TestFixture]
     public class UmbracoRequiredAttributeTests

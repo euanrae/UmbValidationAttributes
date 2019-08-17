@@ -7,7 +7,7 @@ namespace UmbValidationAttributes.Helpers
 {
     public static class AttributeInitialisationHelper
     {
-        public static void Initialise(this ValidationAttribute attribute, string messageKey, string fallbackMessageKey = "")
+        public static void Initialise(this ValidationAttribute attribute, string messageKey, string fallbackMessageKey = "", string defaultMessage = "")
         {
             if (string.IsNullOrWhiteSpace(messageKey))
             {
@@ -18,11 +18,19 @@ namespace UmbValidationAttributes.Helpers
 
             string errorMessage = validationMessageService.GetValue(messageKey, fallbackMessageKey);
 
-            // don't set if it doesn't exist - allow default message
+            // finally set the default message if it's been passed
+            if (string.IsNullOrWhiteSpace(errorMessage) == true)
+            {
+                attribute.ErrorMessage = defaultMessage;
+            }
+
+            // don't set if it doesn't exist - allow default message from the attribute its self
             if (string.IsNullOrWhiteSpace(errorMessage) == false)
             {
                 attribute.ErrorMessage = errorMessage;
             }
+
+
         }
     }
 }
