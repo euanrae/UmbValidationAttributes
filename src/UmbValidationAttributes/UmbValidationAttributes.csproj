@@ -230,7 +230,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\BaseUmbracoValidationAttribute.cs" />
     <Compile Include="Attributes\UmbracoRequiredAttribute.cs" />
     <Compile Include="Helpers\AttributeInitialisationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

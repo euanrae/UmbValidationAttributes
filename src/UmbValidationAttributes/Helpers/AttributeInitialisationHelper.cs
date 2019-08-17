@@ -29,8 +29,6 @@ namespace UmbValidationAttributes.Helpers
             {
                 attribute.ErrorMessage = errorMessage;
             }
-
-
         }
     }
 }

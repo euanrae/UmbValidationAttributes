@@ -6,6 +6,10 @@ namespace UmbValidationAttributes.Attributes
 {
     public class UmbracoRequiredAttribute : RequiredAttribute
     {
+        public UmbracoRequiredAttribute(string messageKey) : this(messageKey, "", "")
+        {
+
+        }
         public UmbracoRequiredAttribute(string messageKey, string fallbackMessageKey = "", string defaultMessage = "")
         {
             if (string.IsNullOrWhiteSpace(messageKey))
