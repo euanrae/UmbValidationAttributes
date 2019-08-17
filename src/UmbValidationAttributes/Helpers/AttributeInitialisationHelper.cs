@@ -21,7 +21,7 @@ namespace UmbValidationAttributes.Helpers
             // finally set the default message if it's been passed
             if (string.IsNullOrWhiteSpace(errorMessage) == true)
             {
-                attribute.ErrorMessage = defaultMessage;
+                errorMessage = defaultMessage;
             }
 
             // don't set if it doesn't exist - allow default message from the attribute its self
