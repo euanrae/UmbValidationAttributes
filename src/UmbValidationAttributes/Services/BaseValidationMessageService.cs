@@ -8,7 +8,7 @@
         /// Returns an item from the source given a key. If main item is empty, looks 
         /// for a fallback.  If fallback is empty, it returns empty.
         /// This implementation is purposefully pessimistic to allow default items
-        /// to be implemented elsewhere 
+        /// to be implemented elsewhere, ie validators
         /// </summary>
         /// <param name="key"></param>
         /// <param name="defaultItemKey"></param>

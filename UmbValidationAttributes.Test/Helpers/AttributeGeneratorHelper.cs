@@ -27,7 +27,8 @@ namespace UmbValidationAttributes.Test.Helpers
             var items =
                 new List<Type>
                 {
-                    typeof(UmbracoRequiredAttribute)
+                    typeof(UmbracoRequiredAttribute),
+                    typeof(UmbracoEmailAddressAttribute)
                 };
 
             return items.ToArray();

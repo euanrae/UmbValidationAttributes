@@ -94,6 +94,7 @@
     <Compile Include="Helpers\DependencyResolverHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AttributeTests\UmbracoRequiredAttributeTests.cs" />
+    <Compile Include="ValidationMessageServices\UmbracoDictionaryValidationMessageServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

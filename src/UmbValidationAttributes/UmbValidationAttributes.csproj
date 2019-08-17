@@ -230,6 +230,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\BaseAttributes\BaseEmailAddressAttribute.cs" />
+    <Compile Include="Attributes\UmbracoEmailAddressAttribute.cs" />
     <Compile Include="Attributes\UmbracoRequiredAttribute.cs" />
     <Compile Include="Helpers\AttributeInitialisationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,6 +239,8 @@
     <Compile Include="Services\UmbracoContentValidationMessageService.cs" />
     <Compile Include="Services\UmbracoDictionaryValidationMessageService.cs" />
     <Compile Include="Services\IValidationMessageService.cs" />
+    <Compile Include="ServiceWrappers\DictionaryService.cs" />
+    <Compile Include="ServiceWrappers\IDictionaryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
