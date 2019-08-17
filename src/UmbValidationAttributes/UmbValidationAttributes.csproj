@@ -230,7 +230,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\BaseUmbracoValidationAttribute.cs" />
+    <Compile Include="Attributes\UmbracoRequiredAttribute.cs" />
+    <Compile Include="Helpers\AttributeInitialisationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BaseValidationMessageService.cs" />
     <Compile Include="Services\UmbracoContentValidationMessageService.cs" />
     <Compile Include="Services\UmbracoDictionaryValidationMessageService.cs" />
     <Compile Include="Services\IValidationMessageService.cs" />

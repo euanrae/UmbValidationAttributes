@@ -2,29 +2,26 @@
 
 namespace UmbValidationAttributes.Services
 {
-    public class UmbracoDictionaryValidationMessageService : IValidationMessageService
+    public class UmbracoDictionaryValidationMessageService : BaseValidationMessageService, IValidationMessageService
     {
         private readonly UmbracoHelper _umbracoHelper;
 
-        public UmbracoDictionaryValidationMessageService()
+        /// <summary>
+        /// This is a kind of fake for DI that allows us to test this
+        /// </summary>
+        public UmbracoDictionaryValidationMessageService() : this(Umbraco.Web.Composing.Current.UmbracoHelper)
         {
-            this._umbracoHelper = Umbraco.Web.Composing.Current.UmbracoHelper;
+            
         }
 
-        public string GetValue(string key, string defaultValue = "")
+        public UmbracoDictionaryValidationMessageService(UmbracoHelper umbracoHelper)
         {
-            return this._umbracoHelper.GetDictionaryValue(key, defaultValue);
+            this._umbracoHelper = umbracoHelper;
         }
 
-        public string GetValue(string key, string defaultItemKey, string defaultValue = "")
+        public override string GetValueFromSource(string key)
         {
-            string dictionaryValue = this._umbracoHelper.GetDictionaryValue(key);
-            if (string.IsNullOrWhiteSpace(dictionaryValue) == false)
-            {
-                return dictionaryValue;
-            }
-
-            return this.GetValue(defaultItemKey, defaultValue);
+            return this._umbracoHelper.GetDictionaryValue(key, string.Empty);
         }
     }
 }

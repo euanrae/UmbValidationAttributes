@@ -10,22 +10,22 @@ namespace UmbValidationAttributes.Services
 {
     public class UmbracoContentValidationMessageService : IValidationMessageService
     {
-        public string GetValue(string key, string defaultValue = "")
+        public string GetValue(string key)
         {
-            return GetValueFromCurrentPage(key, defaultValue);
+            return GetValueFromCurrentPage(key);
         }
 
-        public string GetValue(string key, string defaultItemKey, string defaultValue = "")
+        public string GetValue(string key, string defaultItemKey)
         {
-            string value = GetValueFromCurrentPage(key, string.Empty);
+            string value = GetValue(key);
             if (String.IsNullOrWhiteSpace(value) == false)
             {
                 return value;
             }
-            return GetValueFromCurrentPage(defaultItemKey, string.Empty);
+            return GetValue(defaultItemKey);
         }
 
-        private string GetValueFromCurrentPage(string propertyAlias, string fallbackText)
+        private string GetValueFromCurrentPage(string propertyAlias)
         {
             IPublishedContent currentPage = GetCurrentPage();
 
@@ -34,7 +34,9 @@ namespace UmbValidationAttributes.Services
                 return string.Empty;
             }
 
-            return currentPage.Value<string>(propertyAlias, defaultValue: fallbackText);
+            // return an empty string if nothing found, we don't want
+            // this layer returning a default value
+            return currentPage.Value<string>(propertyAlias, defaultValue: string.Empty);
         }
 
         private IPublishedContent GetCurrentPage()
