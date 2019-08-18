@@ -8,8 +8,8 @@
     <licenseUrl>https://raw.githubusercontent.com/euanrae/UmbValidationAttributes/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/euanrae/UmbValidationAttributes</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Shared libraries for runtime and deployment packaging of .Net applications</description>
-    <tags>packaging areas slices</tags>
+    <description>Library for getting data validation messages from Umbraco CMS</description>
+    <tags>Umbraco, Validation</tags>
     <dependencies>
       <dependency id="UmbracoCms.Core" version="8.0.1" />
       <dependency id="UmbracoCms.Web" version="8.0.1" />
