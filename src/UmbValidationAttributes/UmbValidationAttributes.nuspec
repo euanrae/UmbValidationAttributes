@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>UmbValidationAttributes</id>
+    <version></version>
+    <authors>Euan Rae</authors>
+    <owners>Euan Rae</owners>
+    <licenseUrl>Lhttps://raw.githubusercontent.com/euanrae/UmbValidationAttributes/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/euanrae/UmbValidationAttributes</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Shared libraries for runtime and deployment packaging of .Net applications</description>
+    <tags>packaging areas slices</tags>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="8.0.1" />
+      <dependency id="UmbracoCms.Web" version="8.0.1" />
+    </dependencies>
+  </metadata>
+</package>
