@@ -12,14 +12,20 @@ using System.Text.RegularExpressions;
 
 namespace UmbValidationAttributes.Attributes.BaseAttributes
 {
+    /// <summary>
+    /// Copy of the source code of the base MS class so it can be extended
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
-    public class BaseEmailAddressAttribute : DataTypeAttribute
+    public abstract class BaseEmailAddressAttribute : DataTypeAttribute
     {
 
         // This attribute provides server-side email validation equivalent to jquery validate,
         // and therefore shares the same regular expression.  See unit tests for examples.
         private static Regex _regex = CreateRegEx();
 
+        /// <summary>
+        /// Default ctor
+        /// </summary>
         public BaseEmailAddressAttribute()
             : base(DataType.EmailAddress)
         {
