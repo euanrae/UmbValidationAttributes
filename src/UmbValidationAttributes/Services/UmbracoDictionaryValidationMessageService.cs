@@ -16,7 +16,7 @@ namespace UmbValidationAttributes.Services
         /// <param name="dictionaryService">An IDictionaryService that gets a value from the corresponding key</param>
         public UmbracoDictionaryValidationMessageService(IDictionaryService dictionaryService)
         {
-            this._dictionaryService = dictionaryService;
+            _dictionaryService = dictionaryService;
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace UmbValidationAttributes.Services
         /// <returns></returns>
         public override string GetValueFromSource(string key)
         {
-            return this._dictionaryService.GetDictionaryValue(key);
+            return _dictionaryService.GetDictionaryValue(key);
         }
     }
 }

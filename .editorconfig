@@ -11,7 +11,6 @@ end_of_line = crlf
 dotnet_sort_system_directives_first = true
 dotnet_style_predefined_type_for_locals_parameters_members = true:warning
 dotnet_style_predefined_type_for_member_access = true:warning
-dotnet_style_qualification_for_field = true:warning
 dotnet_style_qualification_for_method = true:warning
 dotnet_style_qualification_for_property = true:warning
 

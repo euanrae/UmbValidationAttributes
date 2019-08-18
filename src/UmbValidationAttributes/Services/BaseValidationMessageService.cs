@@ -1,7 +1,17 @@
 ﻿namespace UmbValidationAttributes.Services
 {
+    /// <summary>
+    /// Base validation service that has fallback logic and the abstract method that 
+    /// must be implemented for interiting classes
+    /// </summary>
     public abstract class BaseValidationMessageService
     {
+        /// <summary>
+        /// Abstract member that must be implemented to get member from the source
+        /// This should only access a repository, and have no logic in it
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public abstract string GetValueFromSource(string key);
 
         /// <summary>
