@@ -17,6 +17,6 @@
   </metadata>
   <files>
     <file src="..\..\src\UmbValidationAttributes\bin\Release\UmbValidationAttributes.dll" target="lib\net472" />
-    
+    <file src="..\..\src\UmbValidationAttributes\bin\Release\UmbValidationAttributes.xml" target="lib\net472" />
   </files>
 </package>
