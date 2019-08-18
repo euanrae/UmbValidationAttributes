@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbValidationAttributes", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8EF1D7B2-6683-43E7-81CA-74AEF21C8614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbValidationAttributes.Test", "UmbValidationAttributes.Test\UmbValidationAttributes.Test.csproj", "{81482530-D953-4DD7-B658-AB7CFCE6D2AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbValidationAttributes.Test", "src\UmbValidationAttributes.Test\UmbValidationAttributes.Test.csproj", "{81482530-D953-4DD7-B658-AB7CFCE6D2AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{5487ACF3-7366-4066-985B-02680AD38B4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{2120FFF5-4C24-41AA-A949-7E916A9FFF2E}"
+	ProjectSection(SolutionItems) = preProject
+		build\nuspec\UmbValidationAttributes.nuspec = build\nuspec\UmbValidationAttributes.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +36,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81482530-D953-4DD7-B658-AB7CFCE6D2AA} = {8EF1D7B2-6683-43E7-81CA-74AEF21C8614}
+		{2120FFF5-4C24-41AA-A949-7E916A9FFF2E} = {5487ACF3-7366-4066-985B-02680AD38B4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F30FBE4-85D0-454B-9316-819FE79BA9E0}
