@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using UmbValidationAttributes.Helpers;
 
 namespace UmbValidationAttributes.Attributes
@@ -7,7 +9,7 @@ namespace UmbValidationAttributes.Attributes
     /// <summary>
     /// RequiredAttribute that gets error message from Umbraco
     /// </summary>
-    public class UmbracoRegexAttribute : RegularExpressionAttribute
+    public class UmbracoRegexAttribute : RegularExpressionAttribute, IClientValidatable
     {
         /// <summary>
         /// Create with a message key - will fallback to RequiredAttribute default message if none found
@@ -32,6 +34,24 @@ namespace UmbValidationAttributes.Attributes
             }
 
             this.Initialise(messageKey, fallbackMessageKey, defaultMessage);
+        }
+
+        /// <summary>
+        /// Returns client validation rules - returns standard regex validation and pattern parameters
+        /// </summary>
+        /// <param name="metadata"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public IEnumerable<ModelClientValidationRule> GetClientValidationRules(ModelMetadata metadata, ControllerContext context)
+        {
+            var validationParams = new ModelClientValidationRule
+            {
+                ErrorMessage = this.ErrorMessage,
+                ValidationType = "regex"
+            };
+            validationParams.ValidationParameters.Add("pattern", this.Pattern);
+
+            yield return validationParams;
         }
     }
 }
